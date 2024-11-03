@@ -1,0 +1,63 @@
+<html>
+<home>
+   <head>
+   <title>DETECTING PARAPHRASES</title>
+   <style>
+   
+   body {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/006/928/168/non_2x/modern-simple-abstract-with-square-geometric-background-in-the-blend-of-dark-blue-and-cyan-gradient-elegant-background-in-dark-blue-and-cyan-color-can-use-for-wallpaper-presentation-backdrop-etc-free-photo.jpg');
+	}
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-family: "Times New Roman";
+      font-size: 48px;
+      }
+    p {
+    	color: white;
+        text-align: left;
+        font-size: 32px;
+        font-family: "Times New Roman";
+        font-weight: bold;
+        }
+    h3
+	{
+   	color: white;
+        font-size: 32px;
+        margin-left: 1000px;
+	margin-top: 200px;
+        font-family: "Times New Roman";
+        }
+    h2
+	{
+   	color: white;
+        font-size: 32px;
+        margin-left: 1000px;
+	     margin-top: -600px;
+        font-family: "Times New Roman";
+        }
+   br {
+        color: white;
+        font-size: 24px;
+        text-align: left;
+        font-family: "Times New Roman";
+        }
+        
+ 
+   </style>
+   
+   </head>   
+   <body>
+      <h1> DETECTING PARAPHRASES </h1>
+      <form action="http://localhost:5000" method="POST">
+         <p>ENTER TEXT: </p>
+         <p><textarea name="query" rows="35" cols="110" autofocus>{{query}}</textarea></p>
+         <br>
+         <p><h2><input type="submit" name="submit" value="CHECK TEST RESULTS"></h2></p>
+         <br>
+         <p><h3>{{output}}</h3></p>
+      </form>
+   </body>
+</home>
+</html>
