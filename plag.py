@@ -18,31 +18,23 @@ def cosineSimilarity():
         universalSetOfUniqueWords = []
         matchPercentage = 0
 
-        ####################################################################################################
-
         inputQuery = request.form['query']
         lowercaseQuery = inputQuery.lower()
 
-        queryWordList = re.sub("[^\w]", " ", lowercaseQuery).split()  # Replace punctuation by space and split
-        # queryWordList = map(str, queryWordList)                   #This was causing divide by zero error
+        queryWordList = re.sub("[^\w]", " ", lowercaseQuery).split()
 
         for word in queryWordList:
             if word not in universalSetOfUniqueWords:
                 universalSetOfUniqueWords.append(word)
 
-        ####################################################################################################
-
         fd = open("database1.txt", "r")
         database1 = fd.read().lower()
 
-        databaseWordList = re.sub("[^\w]", " ", database1).split()  # Replace punctuation by space and split
-        # databaseWordList = map(str, databaseWordList)         #And this also leads to divide by zero error
+        databaseWordList = re.sub("[^\w]", " ", database1).split()
 
         for word in databaseWordList:
             if word not in universalSetOfUniqueWords:
                 universalSetOfUniqueWords.append(word)
-
-        ####################################################################################################
 
         queryTF = []
         databaseTF = []
